@@ -34,7 +34,7 @@ Finally, the controllable `localPin` parameter is passed into a `sprintf` functi
 
 To reproduce the vulnerability, log in to obtain a valid `sessionCheck` token, and send the following crafted HTTP request. The `localPin` parameter is padded with characters exceeding the buffer size to trigger the overflow.
 
-![origin](images\origin.jpg)
+![origin](images/origin.jpg)
 
 HTTP
 
@@ -58,4 +58,4 @@ sessionCheck=ce9c286355132571a3c0c0310e7ad79d&localPin=AAAAAAAAAAAAAAAAAAAAAAAAA
 
 After sending the payload, the `boa` web service crashes immediately, resulting in a Denial of Service. The router's management interface becomes inaccessible.
 
-![Dos](images\Dos.jpg)
+![Dos](images/Dos.jpg)
